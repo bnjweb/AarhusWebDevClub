@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProjectsItem>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+<h2>@Model.Value("title")</h2>
+<p>@Model.Value("mainContent")</p>
+
+<p><b>Status:</b> @Model.Value("status")</p>
+
+<p><b>Tags:</b></p>
+
+@if(Model.Tags.Any()){
+    <ul>
+        @foreach(var tag in Model.Tags){
+          <li class="tags">#@tag</li>
+        }
+    </ul>
+}

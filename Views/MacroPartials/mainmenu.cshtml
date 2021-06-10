@@ -1,0 +1,61 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using Umbraco.Web
+
+
+@*
+    This snippet makes a list of links to the of children of the current page using an unordered HTML list.
+
+    How it works:
+    - It uses the Children method to get all child pages
+    - It then generates links so the visitor can go to each page
+*@
+
+
+
+<a id ="site-headline" href="http://localhost:49752/"><h1>Aarhus Web Dev Club <> </h1></a>
+<hr>
+@{ var selection = Model.Content.Root().Children.Where(x => x.IsVisible()).ToArray(); }
+<!-- Nav -->
+
+<nav id="nav">
+    <ul class="nav nav-pills">
+        @if (selection.Length > 0)
+        {
+        var root = Model.Content.Root();
+        <li class="nav-item">
+            <a class="nav-link @(Model.Content.Name == root.Name ? " active" : null)" href="/">
+                @Model.Content.Root().Name
+            </a>
+        </li>
+
+        foreach (var item in selection)
+        {
+        <li class="nav-item">
+            <a class="nav-link @(Model.Content.Name == @item.Name ? " active" : null)"
+               href="@item.Url">@item.Name</a>
+        </li>
+
+        }
+
+
+
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="http://localhost:49752/projects/" role="button" aria-haspopup="true" aria-expanded="false">Project Items</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="http://localhost:49752/projects/newsletter/">Newsletter</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="http://localhost:49752/projects/an-honest-review-of-gatsby/">An Honest Review of Gatsby
+</a>
+            </div>
+        </li>
+
+        }
+
+
+    </ul>
+</nav>
+<hr>
+
+

@@ -1,0 +1,319 @@
+
+        .comment {
+            height: 150px;
+            background-color:#f1f1f1;
+            width:90%;
+            margin:auto;
+            margin-bottom: 20px;
+            padding-left:50px;  
+            padding-top:10px;
+padding-right:50px;
+
+        }
+        
+  ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0;
+  margin: 0;
+}
+
+
+
+nav {
+padding-left:50px; 
+font-size:18px;
+}
+
+/* styling for the differents texts */
+
+#site-headline{
+  text-decoration:none;
+  color:#000;
+}
+
+
+
+h1{
+padding-top:10px; 
+padding-bottom:10px;    
+padding-left:50px;    
+font-size:50px;
+ text-align: center;
+}
+
+h2{
+ text-align: center;
+font-size:40px;
+padding-bottom:20px;
+padding-top:20px;
+
+
+}
+
+p{
+padding-left:50px;    
+padding-right:50px;
+}
+
+h4{
+padding-left:50px;    
+padding-right:50px;
+color:white;
+
+}
+
+.icon{
+color:white;
+text-align:center;
+font-size:110px;
+clear:both;
+}
+
+.welcome{
+color:white;
+}
+
+#welcome-content{
+color:white;
+}
+
+
+
+.spikes {
+  position: relative;
+  background: #2c3e50;
+  height: 40vh;
+}
+
+.spikes::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 15px;
+  background-size: 15px 100%;
+  background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
+  background-position: 0 0;
+}
+
+.spikesbottom {
+  position: relative;
+  background: #2c3e50;
+  height: 30vh;
+  margin-top:50px;
+}
+
+
+
+
+/* centers projects and articles li */
+
+.projects{
+    margin-top:20px;
+    text-align: center;
+    font-size:18px;
+}
+
+/* styling for the tags */
+
+.tags{
+    margin-left:50px;
+   float:left;
+
+}
+
+
+fieldset{
+  text-align:center;
+  
+}
+
+.col-md-10{
+  min-width: 50%;
+  display:inline;
+  padding: 12px;
+
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  
+
+}
+
+
+.control-label-col-md-2 {
+  margin-left:15px;
+  font-size:24px;
+}
+
+.form-control{
+  min-width: 50%;
+  display:inline;
+  padding: 12px;
+
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+
+}
+
+input[type=text], select, textarea {
+  min-width: 50%;
+  display:inline;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+  
+
+}
+
+label {
+  margin-right:50px;
+  font-size:24px;
+  
+  
+}
+
+.form-control {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    
+}
+
+
+input[type=password] {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+button{
+   background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+ 
+}
+
+
+.button{
+   background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+ 
+}
+
+.form-horizontal{
+    
+
+ text-align:center;
+ 
+}
+
+.member-container{
+    
+ width:36%;
+ margin:auto;
+ 
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 252px;
+   float:left;
+   margin-left:20px;
+   margin-top:20px;
+  
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 20px 16px;
+}
+
+.image{
+
+width:250px;
+height:250px;
+}
+
+
+.grid-container {
+  
+ 
+  padding: 10px;
+  
+}
+.grid-item {
+  
+  padding: 20px;
+ margin:auto;
+
+}
+
+#loggedin-status{
+    margin-top:200px;
+text-align:center;
+font-size:24px;
+}
+
+#logout-button
+{
+background-color: #000; 
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+
+  footer {
+   bottom: 0;
+    height: 200px;
+   margin-bottom:-400px;
+    position: absolute;
+    width: 100%;
+    background-color:f1f1f1;
+   
+  
+  
+}

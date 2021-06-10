@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.UserComments>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+
+<h2>@Model.Value("sitetitle")</h2>
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("7e63ba72-91e7-435e-b880-0f5fa45a3f74"))
+    .Children()
+    .Where(x => x.IsVisible())
+    .OrderBy(x => x.Id);
+}
+<ul>
+	@foreach (var item in selection)
+	{
+		<li><div class="comment">
+			<a href="@item.Url"> <b>Username:</b>  @item.Value("username") <br><b>E-Mail:</b> @item.Value("email")<br> <b>Comments... </b> @item.Value("message")   </a>
+	</div></li>
+	}
+</ul>
+
+
+

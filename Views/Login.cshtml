@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+@{
+    Layout = "Master.cshtml";
+}
+
+
+@if (!Members.GetCurrentLoginStatus().IsLoggedIn)
+{
+    @Html.Partial("Login");
+}
+
+
+
+else{
+
+<p id ="loggedin-status">You are currently logged in as @Members.GetCurrentLoginStatus().Name</p>
+@Html.Partial("Logout");
+}
+

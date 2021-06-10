@@ -1,0 +1,60 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Members>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@using Umbraco.Core;
+@using Umbraco.Core.Models;
+@using Umbraco.Core.Services;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+@{
+var memberService = Services.MemberService;
+var members = memberService.GetMembersByGroup("Active");
+
+
+}
+
+<h2>Active Members</h2>
+
+@foreach (var member in members)
+{
+<div class="member-container">
+<div class="card">
+
+   @{
+           
+            var memberImage = member.GetValue<string>("photo");
+     }
+      
+        <img src="@(memberImage != null ? memberImage : "")" class ="image" />  
+    
+   <div class="container">  
+<b>Name:</b> @(member.GetValue("firstname") + " "
++ member.GetValue("lastname")) <br/>
+<b>Address:</b> @member.GetValue("address")<br />
+@(member.GetValue("zip") + " "
++ member.GetValue("city"))<br />
+<b>Mobile:</b> @member.GetValue("mobile")<br />
+</div>
+</div>
+</div>
+
+           
+
+
+}
+
+   
+        
+
+
+
+
+
+
+
+
+
+      
+
